@@ -1,4 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, Input } from '@angular/core';
+import { MyGal } from '../Models/my-gal.model';
 
 @Component({
   selector: 'app-my-gal',
@@ -6,16 +7,21 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./my-gal.component.scss']
 })
 export class MyGalComponent implements OnInit {
-  title!:string;
-  description!:string;
-  createDate!:Date;
-  like!:number;
-  imageUrl!:string;
+@Input() mygal!:MyGal;
+  buttonText!:string;
   ngOnInit(){
-    this.title='happy';
-    this.description='moment de joie';
-    this.createDate=new Date();
-    this.like=6;
-    this.imageUrl='https://naitreetgrandir.com/documentsng/images/imagesprincipalepetite/joie-enfants-emotion-cultiver-isabelle-filliozat.jpg';
+   this.buttonText='Like!!';
   }
+
+  onLike(){
+   if (this.buttonText=='Like!!') {
+    this.mygal.like++;
+    this.buttonText ='already Liked';
+   } else {
+    this.mygal.like--;
+    this.buttonText='Like!!';
+
+   }
+  }
+
 }

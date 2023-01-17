@@ -1,7 +1,10 @@
 <div class="my-gal-card">
-<h2>{{ title }}</h2>
-<img [src]="imageUrl" [alt]="title">
-<p>{{description}}</p>
-<p>Mise en Ligne le : {{createDate}}</p>
-<p>🤌{{like}}</p>
+<h2>{{mygal.title }}</h2>
+<img [src]="mygal.imageUrl" [alt]="mygal.title">
+<p>{{mygal.description}}</p>
+<p>Mise en Ligne le : {{mygal.createDate}}</p>
+<p>
+  <button (click)="onLike()">{{buttonText}}</button>
+  🤌{{mygal.like}}
+</p>
 </div>
