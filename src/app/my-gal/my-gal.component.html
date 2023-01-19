@@ -2,6 +2,7 @@
 <h2>{{mygal.title }}</h2>
 <img [src]="mygal.imageUrl" [alt]="mygal.title">
 <p>{{mygal.description}}</p>
+<p *ngIf="mygal.location">photo prise à {{mygal.location}}</p>
 <p>Mise en Ligne le : {{mygal.createDate}}</p>
 <p>
   <button (click)="onLike()">{{buttonText}}</button>
