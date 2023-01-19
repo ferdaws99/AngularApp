@@ -1,6 +1,37 @@
 .my-gal-card {
+
   width: 35%;
+  padding: 2%;
+  margin: 10%;
+  height: 100%;
+  border-radius: 2%;
+  box-shadow: 3px 3px 3px 3px  lightgrey ;
   img {
     width: 100%;
+  }
+ button{
+  background-color: transparent;
+  padding: 5px 10px;
+  margin-right: 20px;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: lightgray 3px 3px 7px;
+  font-size: 14px;
+  font-weight:500;
+  &:active{
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
+  }
+}
+.liked {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 3px 3px 7px;
+    color: darkgreen;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
+    }
   }
 }

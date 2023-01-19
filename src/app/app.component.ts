@@ -18,7 +18,7 @@ ngOnInit(){
     description:'moment de joie',
    imageUrl:'https://naitreetgrandir.com/documentsng/images/imagesprincipalepetite/joie-enfants-emotion-cultiver-isabelle-filliozat.jpg',
     createDate: new Date(),
-    like:0,
+    like:12,
     location:'sous pluit'
   },
   {

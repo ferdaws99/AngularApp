@@ -1,11 +1,11 @@
-<div class="my-gal-card">
-<h2>{{mygal.title }}</h2>
+<div class="my-gal-card" [ngClass]="{liked:buttonText==='already Liked'}">
+<h2>{{mygal.title | uppercase }}</h2>
 <img [src]="mygal.imageUrl" [alt]="mygal.title">
 <p>{{mygal.description}}</p>
 <p *ngIf="mygal.location">photo prise à {{mygal.location}}</p>
-<p>Mise en Ligne le : {{mygal.createDate}}</p>
+<p>Mise en Ligne le : {{mygal.createDate | date:'dd/MM/yy à HH:mm'}}</p>
 <p>
-  <button (click)="onLike()">{{buttonText}}</button>
-  🤌{{mygal.like}}
+  <button  (click)="onLike()">{{buttonText}}</button>
+  <span [ngStyle]="{color:'rgb(0,'+mygal.like*10+',0)'}">🤌{{mygal.like}}</span>
 </p>
 </div>
