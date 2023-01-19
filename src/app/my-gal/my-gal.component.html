@@ -3,7 +3,7 @@
 <img [src]="mygal.imageUrl" [alt]="mygal.title">
 <p>{{mygal.description}}</p>
 <p *ngIf="mygal.location">photo prise à {{mygal.location}}</p>
-<p>Mise en Ligne le : {{mygal.createDate | date:'dd/MM/yy à HH:mm'}}</p>
+<p>Mise en Ligne le : {{mygal.createDate | date:'longDate'}}</p>
 <p>
   <button  (click)="onLike()">{{buttonText}}</button>
   <span [ngStyle]="{color:'rgb(0,'+mygal.like*10+',0)'}">🤌{{mygal.like}}</span>
